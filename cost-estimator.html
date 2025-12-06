@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Cost Estimator - Uttarakhand Tourism</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🏔️ Uttarakhand Tourism</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="activities.html" class="nav-link">Activities</a>
+                <a href="travel.html" class="nav-link">Travel Guide</a>
+                <a href="stay.html" class="nav-link">Stay</a>
+                <a href="cost-estimator.html" class="nav-link active">Cost Calculator</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Travel Cost Estimator</h1>
+            <p>Plan your budget for the perfect Uttarakhand trip</p>
+        </div>
+    </section>
+
+    <!-- Cost Calculator -->
+    <section class="cost-calculator">
+        <div class="container">
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <h2>Trip Details</h2>
+                    <form id="cost-form">
+                        <div class="form-group">
+                            <label for="people">Number of People</label>
+                            <input type="number" id="people" min="1" max="20" value="2" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="duration">Duration (Days)</label>
+                            <input type="number" id="duration" min="1" max="30" value="5" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travel-type">Travel Mode</label>
+                            <select id="travel-type" required>
+                                <option value="train">Train</option>
+                                <option value="bus">Bus</option>
+                                <option value="flight">Flight</option>
+                                <option value="car">Private Car</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="accommodation">Accommodation Type</label>
+                            <select id="accommodation" required>
+                                <option value="budget">Budget (₹500-1000/night)</option>
+                                <option value="mid-range">Mid-range (₹1500-3000/night)</option>
+                                <option value="luxury">Luxury (₹4000+/night)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destination-type">Destination Type</label>
+                            <select id="destination-type" required>
+                                <option value="religious">Religious/Pilgrimage</option>
+                                <option value="hill-station">Hill Stations</option>
+                                <option value="adventure">Adventure/Trekking</option>
+                                <option value="wildlife">Wildlife Safari</option>
+                                <option value="mixed">Mixed Destinations</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="food-preference">Food Preference</label>
+                            <select id="food-preference" required>
+                                <option value="local">Local Restaurants (₹200-400/day)</option>
+                                <option value="mid">Mid-range Dining (₹500-800/day)</option>
+                                <option value="fine">Fine Dining (₹1000+/day)</option>
+                            </select>
+                        </div>
+
+                        <button type="button" id="calculate-btn" class="calculate-button">Calculate Cost</button>
+                    </form>
+                </div>
+
+                <div class="calculator-result" id="result-section" style="display: none;">
+                    <h2>Estimated Cost Breakdown</h2>
+                    <div class="cost-breakdown">
+                        <div class="cost-item">
+                            <span class="cost-label">Transportation:</span>
+                            <span class="cost-value" id="transport-cost">₹0</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">Accommodation:</span>
+                            <span class="cost-value" id="accommodation-cost">₹0</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">Food & Dining:</span>
+                            <span class="cost-value" id="food-cost">₹0</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">Activities & Sightseeing:</span>
+                            <span class="cost-value" id="activity-cost">₹0</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">Local Transportation:</span>
+                            <span class="cost-value" id="local-transport-cost">₹0</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">Miscellaneous (10%):</span>
+                            <span class="cost-value" id="misc-cost">₹0</span>
+                        </div>
+                        <div class="cost-total">
+                            <span class="cost-label">Total Estimated Cost:</span>
+                            <span class="cost-value" id="total-cost">₹0</span>
+                        </div>
+                        <div class="cost-per-person">
+                            <span class="cost-label">Cost Per Person:</span>
+                            <span class="cost-value" id="per-person-cost">₹0</span>
+                        </div>
+                    </div>
+
+                    <div class="cost-tips">
+                        <h3>💡 Money Saving Tips</h3>
+                        <ul id="saving-tips">
+                            <li>Book accommodations in advance for better rates</li>
+                            <li>Travel during off-season for discounted prices</li>
+                            <li>Use public transportation for local travel</li>
+                            <li>Try local street food for authentic and affordable meals</li>
+                            <li>Look for package deals that include multiple activities</li>
+                        </ul>
+                    </div>
+
+                    <div class="cost-notes">
+                        <h3>📝 Important Notes</h3>
+                        <ul>
+                            <li>Costs are estimated and may vary based on season and availability</li>
+                            <li>Peak season (May-June, Oct-Nov) prices may be 20-30% higher</li>
+                            <li>Adventure activities and helicopter services cost extra</li>
+                            <li>Always keep 15-20% buffer for unexpected expenses</li>
+                            <li>Prices include basic sightseeing but not premium experiences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Itineraries -->
+    <section class="sample-itineraries">
+        <div class="container">
+            <h2>Sample Budget Itineraries</h2>
+            <div class="itinerary-grid">
+                <div class="itinerary-card">
+                    <h3>Budget Spiritual Tour (5 Days)</h3>
+                    <div class="itinerary-cost">₹8,000 - ₹12,000 per person</div>
+                    <ul>
+                        <li>Haridwar - Rishikesh - Kedarnath</li>
+                        <li>Train travel + shared taxis</li>
+                        <li>Budget accommodations</li>
+                        <li>Local food and basic activities</li>
+                    </ul>
+                </div>
+                <div class="itinerary-card">
+                    <h3>Hill Station Getaway (7 Days)</h3>
+                    <div class="itinerary-cost">₹15,000 - ₹25,000 per person</div>
+                    <ul>
+                        <li>Nainital - Mussoorie - Auli</li>
+                        <li>Private car or bus travel</li>
+                        <li>Mid-range hotels</li>
+                        <li>Adventure activities included</li>
+                    </ul>
+                </div>
+                <div class="itinerary-card">
+                    <h3>Luxury Adventure (10 Days)</h3>
+                    <div class="itinerary-cost">₹40,000 - ₹60,000 per person</div>
+                    <ul>
+                        <li>Complete Uttarakhand circuit</li>
+                        <li>Flight + helicopter transfers</li>
+                        <li>Luxury resorts and camps</li>
+                        <li>Premium activities and guides</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Uttarakhand Tourism</h3>
+                    <p>Discover the divine beauty of Dev Bhoomi</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="travel.html">Travel Guide</a></li>
+                        <li><a href="tips.html">Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 info@uttarakhandtourism.com</p>
+                    <p>📞 +91-135-2711817</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Uttarakhand Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
