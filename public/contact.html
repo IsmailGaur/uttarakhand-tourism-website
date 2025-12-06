@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Uttarakhand Tourism</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🏔️ Uttarakhand Tourism</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="activities.html" class="nav-link">Activities</a>
+                <a href="travel.html" class="nav-link">Travel Guide</a>
+                <a href="stay.html" class="nav-link">Stay</a>
+                <a href="cost-estimator.html" class="nav-link">Cost Calculator</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch for your perfect Uttarakhand experience</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Planning your trip to Uttarakhand? We're here to help you create unforgettable memories in Dev Bhoomi. Reach out to us for personalized travel advice, booking assistance, or any questions about destinations and activities.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>info@uttarakhandtourism.com</p>
+                                <p>support@uttarakhandtourism.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <h3>Phone</h3>
+                                <p>+91-135-2711817</p>
+                                <p>+91-135-2711818 (24/7 Emergency)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <h3>Address</h3>
+                                <p>Uttarakhand Tourism Development Board</p>
+                                <p>Rajpur Road, Dehradun - 248001</p>
+                                <p>Uttarakhand, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-text">
+                                <h3>Office Hours</h3>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 9:00 AM - 2:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Send us a Message</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="travel-dates">Preferred Travel Dates</label>
+                            <input type="text" id="travel-dates" name="travel-dates" placeholder="e.g., May 15-25, 2024">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="destination">Interested Destinations</label>
+                            <select id="destination" name="destination">
+                                <option value="">Select a destination</option>
+                                <option value="char-dham">Char Dham Yatra</option>
+                                <option value="hill-stations">Hill Stations</option>
+                                <option value="adventure">Adventure & Trekking</option>
+                                <option value="wildlife">Wildlife Safari</option>
+                                <option value="spiritual">Spiritual Journey</option>
+                                <option value="custom">Custom Itinerary</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="group-size">Group Size</label>
+                            <select id="group-size" name="group-size">
+                                <option value="">Select group size</option>
+                                <option value="1">Solo Traveler</option>
+                                <option value="2">Couple</option>
+                                <option value="3-5">Small Group (3-5)</option>
+                                <option value="6-10">Medium Group (6-10)</option>
+                                <option value="10+">Large Group (10+)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget Range (per person)</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="budget">Budget (₹5,000-15,000)</option>
+                                <option value="mid-range">Mid-range (₹15,000-30,000)</option>
+                                <option value="luxury">Luxury (₹30,000+)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your travel preferences, special requirements, or any questions you have..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What is the best time to visit Uttarakhand?</h3>
+                    <p>The best time depends on your destination and activities. For hill stations and trekking: March-June and September-November. For Char Dham: May-October. For skiing: December-March.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need permits for trekking?</h3>
+                    <p>Some high-altitude treks and protected areas require permits. We can help you obtain necessary permits for Valley of Flowers, Nanda Devi, and other restricted areas.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I book helicopter services for Char Dham?</h3>
+                    <p>Helicopter bookings can be made online through official websites or authorized agents. We recommend booking well in advance, especially during peak season.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What should I pack for a Uttarakhand trip?</h3>
+                    <p>Pack layers of clothing, comfortable walking shoes, rain gear, sunscreen, first aid kit, and any personal medications. Specific gear depends on your planned activities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts -->
+    <section class="emergency-contacts">
+        <div class="container">
+            <h2>Emergency Contacts</h2>
+            <div class="emergency-grid">
+                <div class="emergency-item">
+                    <h3>🚨 Tourist Helpline</h3>
+                    <p>1363 (24/7 Toll-free)</p>
+                </div>
+                <div class="emergency-item">
+                    <h3>🚑 Medical Emergency</h3>
+                    <p>108 (Ambulance)</p>
+                </div>
+                <div class="emergency-item">
+                    <h3>🚓 Police</h3>
+                    <p>100 (Emergency)</p>
+                </div>
+                <div class="emergency-item">
+                    <h3>🔥 Fire Department</h3>
+                    <p>101 (Fire Emergency)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Uttarakhand Tourism</h3>
+                    <p>Discover the divine beauty of Dev Bhoomi</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="travel.html">Travel Guide</a></li>
+                        <li><a href="tips.html">Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 info@uttarakhandtourism.com</p>
+                    <p>📞 +91-135-2711817</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Uttarakhand Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
